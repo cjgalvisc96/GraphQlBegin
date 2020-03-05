@@ -1,0 +1,25 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "title": "Nodejs Course",
+            "author": "Jhon Carter",
+            "topic": "javascript",
+            "url": "http://javascript.com"
+        },
+        {
+            "id": 2,
+            "title": "Python Course",
+            "author": "Carl Guest",
+            "topic": "python",
+            "url": "http://python.com"
+        },
+        {
+            "id": 3,
+            "title": "Mongo Course",
+            "author": "Andreu Carter",
+            "topic": "mongo",
+            "url": "http://mongo.com"
+        }
+    ]
+}

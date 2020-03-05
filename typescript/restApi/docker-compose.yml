@@ -1,0 +1,26 @@
+#Docker -v
+version: '3'
+
+services:
+  #Microservice for Users
+  microserver_posts:
+    container_name: typescript_rest_api_container
+    build: .
+    command: npm run server_prod
+    #Different port for evit conflicts
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./.:/app
+    depends_on: 
+      - mongo-db
+
+  mongo-db: 
+    container_name: mongo_db
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_DATABASE=users
+    ports:
+      - "27017-27019:27017-27019"
+    volumes: 
+      - /data/db
